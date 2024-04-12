@@ -47,6 +47,9 @@ const S = {
   `,
   Button: styled.button`
     padding: 15px;
+    @media all and (max-width: 500px) {
+      height: 60px;
+    }
   `,
   ImgWrapper: styled.div`
     width: 40%;

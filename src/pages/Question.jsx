@@ -116,7 +116,7 @@ const S = {
     transform: translateY(-10px);
     @media all and (max-width: 500px) {
       height: 60px;
-      border: 1px solid #303030;
+      border: 1px solid #979797;
       color: #303030;
     }
   `,

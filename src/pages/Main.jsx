@@ -41,16 +41,16 @@ const S = {
   `,
   ButtonWrapper: styled.div`
     width: 30%;
-
     @media all and (max-width: 500px) {
       width: 200px;
     }
   `,
   Button: styled.button`
     padding: 15px;
+    border-radius: 5px;
     @media all and (max-width: 500px) {
       height: 60px;
-      border: 1px solid #303030;
+      border: 1px solid #979797;
       color: #303030;
     }
   `,

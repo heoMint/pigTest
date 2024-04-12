@@ -50,6 +50,7 @@ const S = {
     padding: 15px;
     @media all and (max-width: 500px) {
       height: 60px;
+      color: #303030;
     }
   `,
   ImgWrapper: styled.div`

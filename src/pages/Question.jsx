@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSelectedAnswer } from '../reducer/actions';
+import img from '../assets/pig2.jpeg';
 
 // eslint-disable-next-line react/prop-types
 const Question = () => {
@@ -31,7 +32,6 @@ const Question = () => {
     } else {
       setShowResultButton(true);
       setShowAnswers(false);
-
     }
   };
 
@@ -42,7 +42,7 @@ const Question = () => {
   return (
     <main className='main'>
       <Header />
-      <div>
+      <S.QuesWrapper>
         <S.Question>
           {showAnswers && qnaList[currentQuestionIndex].q}
         </S.Question>
@@ -58,20 +58,36 @@ const Question = () => {
             ))}
         </S.ListWrapper>
         {showResultButton && currentQuestionIndex === END_POINT && (
-          <button onClick={navigateResultsPage}>결과 보기</button>
+          <>
+            <S.Img
+              src={img}
+              alt='배나온 돼지가 앉아있다'
+            />
+
+            <S.Button onClick={navigateResultsPage}>결과 보기</S.Button>
+          </>
         )}
-      </div>
+      </S.QuesWrapper>
     </main>
   );
 };
 const S = {
+  QuesWrapper: styled.div`
+    display: grid;
+  `,
   Question: styled.p`
     font-size: 1.7rem;
+    @media all and (max-width: 500px) {
+      font-size: 1rem;
+    }
   `,
   ListWrapper: styled.ol`
     width: 70%;
     display: grid;
     justify-items: center;
+    @media all and (max-width: 500px) {
+      width: 95%;
+    }
   `,
   List: styled.li`
     list-style: none;
@@ -81,8 +97,22 @@ const S = {
     border: 1px solid;
     border-radius: 5px;
     padding: 10px;
-    margin: 15px;
+    margin: 10px;
     cursor: pointer;
+    @media all and (max-width: 500px) {
+      font-size: 1rem;
+    }
+  `,
+  Img: styled.img`
+    width: 60%;
+    transform: translateY(-40px);
+    @media all and (max-width: 500px) {
+      width: 90%;
+    }
+  `,
+  Button: styled.button`
+    width: 60%;
+    transform: translateY(-10px);
   `,
 };
 export default Question;

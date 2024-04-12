@@ -11,7 +11,11 @@ const Main = () => {
   return (
     <>
       <main className='main'>
-        <S.Title>내가 만약 돼지라면? 나는 어떤 돼지일까 ?🐷</S.Title>
+        <S.Title>
+          <span>
+            내가 만약 돼지라면 ? <br /> 나는 어떤 돼지일까 ? 🐷
+          </span>
+        </S.Title>
         <S.ImgWrapper className='img-box'>
           <img
             src={img}
@@ -27,18 +31,28 @@ const Main = () => {
 };
 
 const S = {
-  Title: styled.p`
-    margin-top: 30px;
-    font-size: 2rem;
+  Title: styled.div`
+    display: flex;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    @media all and (max-width: 500px) {
+      font-size: 1.3rem;
+    }
   `,
   ButtonWrapper: styled.div`
     width: 30%;
+    @media all and (max-width: 500px) {
+      width: 200px;
+    }
   `,
   Button: styled.button`
     padding: 15px;
   `,
   ImgWrapper: styled.div`
-    width: 50%;
+    width: 40%;
+    @media all and (max-width: 500px) {
+      width: 90%;
+    }
   `,
 };
 export default Main;

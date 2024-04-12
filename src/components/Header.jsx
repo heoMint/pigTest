@@ -15,5 +15,8 @@ const S = {
   Title: styled.div`
     margin-top: 10px;
     font-size: 2rem;
+    @media all and (max-width: 500px) {
+      font-size: 1.3rem;
+    }
   `,
 };

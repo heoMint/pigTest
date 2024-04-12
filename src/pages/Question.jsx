@@ -112,6 +112,7 @@ const S = {
   `,
   Button: styled.button`
     width: 60%;
+    border-radius: 5px;
     transform: translateY(-10px);
     @media all and (max-width: 500px) {
       height: 60px;

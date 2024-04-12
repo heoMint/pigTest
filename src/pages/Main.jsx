@@ -50,6 +50,7 @@ const S = {
     padding: 15px;
     @media all and (max-width: 500px) {
       height: 60px;
+      border: 1px solid #303030;
       color: #303030;
     }
   `,

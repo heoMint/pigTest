@@ -31,6 +31,7 @@ const Question = () => {
     } else {
       setShowResultButton(true);
       setShowAnswers(false);
+
     }
   };
 

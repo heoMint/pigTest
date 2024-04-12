@@ -51,8 +51,8 @@ export const resultReducer = (state = null, action) => {
       // infoList에서 해당 type을 포함하는 항목 찾기
       // eslint-disable-next-line no-case-declarations
       const result = infoList.find((item) => item.type.includes(maxType));
-
-      return result ? result : state; // 일치하는 항목을 반환하거나, 없다면 기존 상태 유지
+      // 일치하는 항목을 반환하거나, 없다면 기존 상태 유지
+      return result ? result : state; 
     default:
       return state;
   }

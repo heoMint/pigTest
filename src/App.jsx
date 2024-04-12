@@ -5,7 +5,6 @@ import Results from './pages/Results';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-
   return (
     <BrowserRouter>
       <Routes>
@@ -21,6 +20,10 @@ function App() {
           path='/result'
           element={<Results />}
         />
+        {/* <Route
+          path='*'
+          element={<Main />}
+        /> */}
       </Routes>
     </BrowserRouter>
   );

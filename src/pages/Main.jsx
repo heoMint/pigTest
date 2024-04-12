@@ -48,9 +48,9 @@ const S = {
   Button: styled.button`
     padding: 15px;
     border-radius: 5px;
+    border: 1px solid #979797;
     @media all and (max-width: 500px) {
       height: 60px;
-      border: 1px solid #979797;
       color: #303030;
     }
   `,

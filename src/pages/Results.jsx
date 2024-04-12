@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { calculateResult } from '../reducer/actions';
+import styled from 'styled-components';
 
 const Results = () => {
   const selectedAnswers = useSelector((state) => state.selectedAnswers);
@@ -22,7 +23,7 @@ const Results = () => {
       <p>{result.desc}</p>
       <div>
         <a href='/'>
-          <button>테스트 다시하기</button>
+          <S.Button>테스트 다시하기</S.Button>
         </a>
 
         <button>공유하기</button>
@@ -31,3 +32,16 @@ const Results = () => {
   );
 };
 export default Results;
+
+const S = {
+  Button: styled.button`
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid #979797;
+    transform: translateY(-10px);
+    @media all and (max-width: 500px) {
+      height: 60px;
+      color: #303030;
+    }
+  `,
+};
